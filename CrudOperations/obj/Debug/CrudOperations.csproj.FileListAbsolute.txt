@@ -1,0 +1,9 @@
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\bin\Debug\CrudOperations.exe.config
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\bin\Debug\CrudOperations.exe
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\bin\Debug\CrudOperations.pdb
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.csprojResolveAssemblyReference.cache
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.Form1.resources
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.Properties.Resources.resources
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.csproj.GenerateResource.Cache
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.exe
+c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.pdb

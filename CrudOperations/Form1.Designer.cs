@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.urunıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saticiidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunfiyatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urundetayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bilgisayarTeknolojileriDataSet = new CrudOperations.BilgisayarTeknolojileriDataSet();
             this.txtUrunID = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtFiyat = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtAra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,72 +54,127 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.urunlerTableAdapter = new CrudOperations.BilgisayarTeknolojileriDataSetTableAdapters.urunlerTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bilgisayarTeknolojileriDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(194, 83);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.urunıdDataGridViewTextBoxColumn,
+            this.saticiidDataGridViewTextBoxColumn,
+            this.urunadDataGridViewTextBoxColumn,
+            this.urunfiyatDataGridViewTextBoxColumn,
+            this.urundetayDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.urunlerBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(235, 89);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(321, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(463, 300);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // urunıdDataGridViewTextBoxColumn
+            // 
+            this.urunıdDataGridViewTextBoxColumn.DataPropertyName = "urun_ıd";
+            this.urunıdDataGridViewTextBoxColumn.HeaderText = "urun_ıd";
+            this.urunıdDataGridViewTextBoxColumn.Name = "urunıdDataGridViewTextBoxColumn";
+            // 
+            // saticiidDataGridViewTextBoxColumn
+            // 
+            this.saticiidDataGridViewTextBoxColumn.DataPropertyName = "satici_id";
+            this.saticiidDataGridViewTextBoxColumn.HeaderText = "satici_id";
+            this.saticiidDataGridViewTextBoxColumn.Name = "saticiidDataGridViewTextBoxColumn";
+            // 
+            // urunadDataGridViewTextBoxColumn
+            // 
+            this.urunadDataGridViewTextBoxColumn.DataPropertyName = "urun_ad";
+            this.urunadDataGridViewTextBoxColumn.HeaderText = "urun_ad";
+            this.urunadDataGridViewTextBoxColumn.Name = "urunadDataGridViewTextBoxColumn";
+            // 
+            // urunfiyatDataGridViewTextBoxColumn
+            // 
+            this.urunfiyatDataGridViewTextBoxColumn.DataPropertyName = "urun_fiyat";
+            this.urunfiyatDataGridViewTextBoxColumn.HeaderText = "urun_fiyat";
+            this.urunfiyatDataGridViewTextBoxColumn.Name = "urunfiyatDataGridViewTextBoxColumn";
+            // 
+            // urundetayDataGridViewTextBoxColumn
+            // 
+            this.urundetayDataGridViewTextBoxColumn.DataPropertyName = "urun_detay";
+            this.urundetayDataGridViewTextBoxColumn.HeaderText = "urun_detay";
+            this.urundetayDataGridViewTextBoxColumn.Name = "urundetayDataGridViewTextBoxColumn";
+            // 
+            // urunlerBindingSource
+            // 
+            this.urunlerBindingSource.DataMember = "urunler";
+            this.urunlerBindingSource.DataSource = this.bilgisayarTeknolojileriDataSet;
+            // 
+            // bilgisayarTeknolojileriDataSet
+            // 
+            this.bilgisayarTeknolojileriDataSet.DataSetName = "BilgisayarTeknolojileriDataSet";
+            this.bilgisayarTeknolojileriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtUrunID
             // 
-            this.txtUrunID.Location = new System.Drawing.Point(83, 90);
+            this.txtUrunID.Location = new System.Drawing.Point(70, 22);
             this.txtUrunID.Name = "txtUrunID";
             this.txtUrunID.Size = new System.Drawing.Size(100, 20);
             this.txtUrunID.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 116);
+            this.textBox2.Location = new System.Drawing.Point(70, 48);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 142);
+            this.textBox3.Location = new System.Drawing.Point(70, 74);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 3;
             // 
-            // textBox4
+            // txtFiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(83, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.txtFiyat.Location = new System.Drawing.Point(70, 100);
+            this.txtFiyat.Name = "txtFiyat";
+            this.txtFiyat.Size = new System.Drawing.Size(100, 20);
+            this.txtFiyat.TabIndex = 4;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(83, 194);
+            this.textBox5.Location = new System.Drawing.Point(70, 126);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 5;
             // 
-            // textBox6
+            // txtAra
             // 
-            this.textBox6.Location = new System.Drawing.Point(415, 26);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 6;
+            this.txtAra.Location = new System.Drawing.Point(392, 31);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(135, 20);
+            this.txtAra.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(331, 31);
+            this.label1.Location = new System.Drawing.Point(313, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Ürün Ara: ";
+            this.label1.Text = "Ürün Adı Ara: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 90);
+            this.label2.Location = new System.Drawing.Point(3, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 8;
@@ -120,7 +183,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 115);
+            this.label3.Location = new System.Drawing.Point(3, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 9;
@@ -129,7 +192,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 146);
+            this.label4.Location = new System.Drawing.Point(3, 78);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 10;
@@ -138,7 +201,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 172);
+            this.label5.Location = new System.Drawing.Point(3, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 11;
@@ -147,7 +210,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 201);
+            this.label6.Location = new System.Drawing.Point(3, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 13);
             this.label6.TabIndex = 12;
@@ -165,7 +228,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 271);
+            this.button1.Location = new System.Drawing.Point(14, 178);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
@@ -175,57 +238,88 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(113, 271);
+            this.button2.Location = new System.Drawing.Point(95, 178);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
             this.button2.Text = "GÜNCELLE";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(32, 300);
+            this.button3.Location = new System.Drawing.Point(14, 207);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
             this.button3.Text = "SİL";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(113, 300);
+            this.button4.Location = new System.Drawing.Point(95, 207);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 17;
             this.button4.Text = "TEMİZLE";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // urunlerTableAdapter
+            // 
+            this.urunlerTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtUrunID);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.txtFiyat);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Location = new System.Drawing.Point(12, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(193, 273);
+            this.panel1.TabIndex = 18;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(559, 31);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 19;
+            this.button5.Text = "Ara";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 388);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(717, 415);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txtUrunID);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bilgisayarTeknolojileriDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,9 +331,9 @@
         private System.Windows.Forms.TextBox txtUrunID;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtFiyat;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -251,6 +345,16 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private BilgisayarTeknolojileriDataSet bilgisayarTeknolojileriDataSet;
+        private System.Windows.Forms.BindingSource urunlerBindingSource;
+        private BilgisayarTeknolojileriDataSetTableAdapters.urunlerTableAdapter urunlerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunıdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saticiidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunfiyatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urundetayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

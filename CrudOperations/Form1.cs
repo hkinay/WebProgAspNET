@@ -25,7 +25,7 @@ namespace CrudOperations
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string sql = "INSERT INTO urunler (urun_ıd, satici_id, urun_ad, urun_fiyat, urun_detay) VALUES('"+ txtUrunID.Text + "', '"+textBox2.Text+"', '"+textBox3.Text +"', @urun_fiyat, '"+textBox5.Text+"')";
+            string sql = "INSERT INTO urunler (urun_id, satici_id, urun_ad, urun_fiyat, urun_detay) VALUES('"+ txtUrunID.Text + "', '"+textBox2.Text+"', '"+textBox3.Text +"', @urun_fiyat, '"+textBox5.Text+"')";
             komut = new SqlCommand();
             komut.Parameters.Add("@urun_fiyat", SqlDbType.Float).Value = float.Parse(txtFiyat.Text);
             Crud.ESG(sql, komut);
@@ -43,8 +43,12 @@ namespace CrudOperations
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'vTYSDataSet1.urunler' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.urunlerTableAdapter2.Fill(this.vTYSDataSet1.urunler);
+            // TODO: Bu kod satırı 'vTYSDataSet.urunler' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.urunlerTableAdapter1.Fill(this.vTYSDataSet.urunler);
             // TODO: This line of code loads data into the 'bilgisayarTeknolojileriDataSet.urunler' table. You can move, or remove it, as needed.
-            this.urunlerTableAdapter.Fill(this.bilgisayarTeknolojileriDataSet.urunler);
+            //this.urunlerTableAdapter.Fill(this.bilgisayarTeknolojileriDataSet.urunler);
 
         }
 
@@ -62,6 +66,8 @@ namespace CrudOperations
         private void button4_Click(object sender, EventArgs e)
 
         {
+            
+
             foreach(Control item in this.panel1.Controls)
                 if(item is TextBox)
                 {
@@ -86,11 +92,11 @@ namespace CrudOperations
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult sonuc = MessageBox.Show("Kaydı Silmek İstiyor Musunuz ?", "Uyarı", MessageBoxButtons.YesNo);
+            DialogResult sonuc = MessageBox.Show("Kaydı Silmek İstiyor Musunuz ?", "Uyarı", MessageBoxButtons.YesNoCancel);
 
             if (sonuc == DialogResult.Yes)
             {
-                string sql = "DELETE FROM urunler WHERE urun_ıd = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'";
+                string sql = "DELETE FROM urunler WHERE urun_id = '" + dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'";
                 komut = new SqlCommand();
                Crud.ESG(sql, komut);
                 yenile();
@@ -100,7 +106,7 @@ namespace CrudOperations
 
     internal class Veritabani
     {
-        public static SqlConnection baglanti = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BilgisayarTeknolojileri;Integrated Security=True");
+        public static SqlConnection baglanti = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=VTYS;Integrated Security=True");
     }
 
     internal class Crud

@@ -59,6 +59,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VTYSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VTYSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VTYSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VTYSDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +101,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VTYSDataSet.xsc">
+      <DependentUpon>VTYSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VTYSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VTYSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VTYSDataSet.xss">
+      <DependentUpon>VTYSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VTYSDataSet1.xsc">
+      <DependentUpon>VTYSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VTYSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VTYSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VTYSDataSet1.xss">
+      <DependentUpon>VTYSDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

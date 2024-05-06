@@ -7,3 +7,13 @@ c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperation
 c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.csproj.GenerateResource.Cache
 c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.exe
 c:\users\elab\documents\visual studio 2015\Projects\CrudOperations\CrudOperations\obj\Debug\CrudOperations.pdb
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\bin\Debug\CrudOperations.exe.config
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\bin\Debug\CrudOperations.exe
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\bin\Debug\CrudOperations.pdb
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.csproj.AssemblyReference.cache
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.Form1.resources
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.Properties.Resources.resources
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.csproj.GenerateResource.cache
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.csproj.CoreCompileInputs.cache
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.exe
+C:\Users\ELAB\Source\Repos\WebProgAspNET\CrudOperations\obj\Debug\CrudOperations.pdb

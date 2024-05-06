@@ -59,7 +59,6 @@ namespace CrudOperations
             //komut = new SqlCommand();
             //komut.Parameters.Add("@urun_fiyat", SqlDbType.Float).Value = float.Parse(txtFiyat.Text);
             //Crud.ESG(sql, komut);
-
             yenile();
         }
 
@@ -107,6 +106,7 @@ namespace CrudOperations
     internal class Veritabani
     {
         public static SqlConnection baglanti = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=VTYS;Integrated Security=True");
+        
     }
 
     internal class Crud
@@ -145,6 +145,12 @@ namespace CrudOperations
 
             return tbl;
 
+
+
+        }
+
+        public  void StringIslemleri()
+        {
 
 
         }
